@@ -1,4 +1,17 @@
-(function(){
+var timeLeft = 60; // In seconds
+var timerId = setInterval(countdown, 1000);
+
+function countdown() {
+     timeLeft--;
+   /// show the timeLeft on the DOM
+    console.log(timeLeft + ' seconds remaining');
+    if (timeLeft < 1) {
+        clearTimeout(timerId);
+        // doSomething();
+    
+}
+  
+  (function(){
     // Functions
     function buildQuiz(){
       // variable to store the HTML output
@@ -153,4 +166,4 @@
     previousButton.addEventListener("click", showPreviousSlide);
     nextButton.addEventListener("click", showNextSlide);
   })();
-  
+}
