@@ -1,17 +1,4 @@
-var timeLeft = 60; // In seconds
-var timerId = setInterval(countdown, 1000);
-
-function countdown() {
-     timeLeft--;
-   /// show the timeLeft on the DOM
-    console.log(timeLeft + ' seconds remaining');
-    if (timeLeft < 1) {
-        clearTimeout(timerId);
-        // doSomething();
-    
-}
-  
-  (function(){
+    (function(){
     // Functions
     function buildQuiz(){
       // variable to store the HTML output
@@ -166,4 +153,24 @@ function countdown() {
     previousButton.addEventListener("click", showPreviousSlide);
     nextButton.addEventListener("click", showNextSlide);
   })();
+
+  var timeLeft = 60; // In seconds
+var timerId = setInterval(countdown, 1000);
+
+function countdown() {
+     timeLeft--;
+   /// show the timeLeft on the DOM
+    console.log(timeLeft + ' seconds remaining');
+    if (timeLeft < 1) {
+        clearTimeout(timerId);
+        // doSomething();
+    
+}
+
+timeLeft = timeLeft -5
+//then you need to ask if the timeLeft is less than 1 and finish
+ if (timeLeft < 1) {
+        clearTimeout(timerId);
+        // doSomething();  /// here you call to showResult 
+ }
 }
